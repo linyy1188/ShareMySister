@@ -1,0 +1,152 @@
+.view{
+	width:600px;
+	position:relative;	
+    padding: 5px;
+    margin: 30px auto ;
+	overflow:hidden;
+	}
+.view-block{
+	width:600px;
+	position:relative;		
+	float:left;
+    padding: 5px;	
+	}
+.view-block-left{
+	width:30px;
+    float: left;
+	margin-right:30px;
+	}
+.view-block-left-img-1-1{
+	width:30px;
+	height:30px;
+	background-image:url(../images/unchecked.png);
+	}
+
+.view-block-left-img-1-2{
+	width:30px;
+	height:30px;
+	margin-left:1px;
+	background-image:url(../images/checked.png);
+	}
+.view-block-right{
+	margin-top:6px;
+	width:500px;
+    float: left;
+	}
+.view-block-right-title{
+	float:left;
+	font-weight:bolder;
+	font-size:22px;
+	color:#272727;
+	width:100%;
+	}
+.view-block-right-discribe{
+	width:100%;
+	float:left;
+	margin-top:10px;
+	color:#6A6A6A;
+	font-size:18px;
+	}
+.view-block-2{
+	width:600px;
+	position:relative;	
+	float:left;
+    padding: 5px;
+	margin-top:30px;
+	}
+.view-block-left-2{
+	width:30px;
+    float: left;
+	margin-right:30px;
+	}
+.view-block-left-img-2-1{
+	width:30px;
+	height:30px;
+	background-image:url(../images/location.png);
+	}
+.view-block-left-img-2-2{
+	width:30px;
+	height:30px;
+	background-image:url(../images/link.png);
+	}
+.view-block-left-img-2-3{
+	width:30px;
+	height:30px;
+	background-image:url(../images/download.png);
+	}
+.view-block-right-2{
+	margin-top:6px;
+	font-weight:bolder;
+	font-size:20px;
+	color:#272727;
+	width:100%;
+	}
+.view-block-3{
+	width:600px;
+	position:relative;	
+	float:left;
+    padding: 5px;
+	margin-top:30px;
+	}
+.view-block-left-3{
+	width:30px;
+    float: left;
+	margin-right:30px;
+	}
+.view-block-left-img-3{
+	width:32px;
+	height:30px;
+	margin-left:-1px;
+	margin-top:1px;
+	background-image:url(../images/like.png);
+	}
+.view-block-right-3{
+	margin-left:2px;
+	margin-top:2px;
+	width:500px;
+    float: left;
+	}
+.view-like{
+	cursor:pointer;
+	width:30px;
+	height:28px;
+	float:left;
+	margin-right:10px;
+	margin-left:2px;
+	background-image:url(../images/likeplus.png);	
+	}
+.view-dislike{
+	cursor:pointer;
+	width:32px;
+	height:26px;
+	float:left;
+	background-image:url(../images/loveminus.png);	
+	}
+.view-right-detail{
+	width:100%;
+	float:left;
+		margin-top:6px;
+		margin-left:2px;
+	color:#999;
+	font-size:14px;
+	line-height:18px;
+	}
+.view-tags{
+	position:relative;
+		margin-top:6px;
+		margin-left:2px;
+	color:#006;
+	font-size:14px;
+	line-height:18px;
+	text-decoration:none;
+	font-weight:bold;
+	}
+.view-tag{
+	position:relative;
+		margin-top:6px;
+		margin-left:2px;
+	color:#006;
+	font-size:14px;
+	line-height:18px;
+	text-decoration:none;
+	}

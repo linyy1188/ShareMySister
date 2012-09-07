@@ -1,0 +1,57 @@
+.get{
+	width:600px;
+	position:relative;	
+    padding: 5px;
+    margin: 30px auto;
+	overflow:hidden;
+}
+.get-block{
+	margin-top:10px;
+	float:left;	
+	padding-bottom:10px;
+	border-top:#000 thin dotted;
+	}
+.get-left{
+	width:30px;
+    float: left;
+	margin-right:30px;
+	}
+.get-left-img-1{
+	width:30px;
+	height:30px;
+	background-image:url(../images/unchecked.png);
+	}
+
+.get-left-img-2{
+	width:30px;
+	height:30px;
+	margin-left:1px;
+	background-image:url(../images/checked.png);
+	}
+.get-right{
+	margin-top:6px;
+	width:500px;
+    float: left;
+	}
+.get-right-title{	
+	font-weight:bolder;
+	font-size:22px;
+	color:#272727;
+	width:100%;
+	text-decoration:none;
+	}
+.get-right-discribe{
+	width:100%;
+	float:left;
+	margin-top:10px;
+	color:#6A6A6A;
+	font-size:18px;
+	}
+.get-right-detail{
+	width:100%;
+	float:left;
+	margin-top:4px;
+	margin-left:2px;
+	color:#999;
+	font-size:14px;	
+}

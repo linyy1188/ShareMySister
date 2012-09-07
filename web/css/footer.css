@@ -1,0 +1,20 @@
+#footer{
+    width: 960px;
+    margin: 155px auto auto;
+    overflow: hidden;
+}
+.footer-line1{
+    text-align: center;
+    color: #0000CC;
+    font-size: 12px;
+    margin: 1px;
+}
+.footer-line1 a{
+    margin: 0 3px;
+}
+.footer-line2{
+    margin: 10px 0;
+    text-align: center;
+    color: #7A77C8;
+    font-size: 14px;
+}

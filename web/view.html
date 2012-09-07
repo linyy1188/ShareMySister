@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+        <title>欢迎光临资料查询分享系统</title>
+        <link href="css/reset.css" rel="stylesheet" type="text/css"/> 
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+        <link href="css/footer.css" rel="stylesheet" type="text/css"/>
+        <link href="css/view.css" rel="stylesheet" type="text/css"/>
+        
+<script src="js/jquery-1.8.0.js" type="text/javascript"></script>
+<script src="js/searchbar.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <div class="head">
+            <div class="barword">
+                <ul class="bar-left">
+                    <li class="bar-left-item bar-left-start">
+                        <a href="index.html" class="bar-a" target="">资料查询</a>
+                    </li>
+                    <li class="bar-left-item">
+                        <a href="share.html" class="bar-a">资料分享</a>
+                    </li>
+                    <li class="bar-left-item">
+                        <a href="item.html" class="bar-a">资料目录</a>
+                    </li>
+                    <li class="bar-left-item bar-left-end">
+                        <a href="home.html" class="bar-a">个人中心</a>
+                    </li>
+                </ul>
+                <ul class="bar-right">
+                    <li class="bar-right-item bar-right-login">
+                        <a href="#" class="bar-a">登录</a>
+                    </li>
+                    <li class="bar-right-item bar-right-signup">
+                        <a href="#" class="bar-a">注册</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="searchbar">
+            <div class="hotsearch">
+                <span class="hotsearch-title">
+                    热门搜索
+                </span>
+                <a href="" class="hotsearch-content">林一叶.avi</a>
+                <a href="" class="hotsearch-content">林一叶.exe</a>
+                <a href="" class="hotsearch-content">林一叶.mkv</a>
+                <a href="" class="hotsearch-content">林一叶.jpg</a>
+                <a href="" class="hotsearch-content">林一叶.zip</a>
+            </div>
+            <div class="searchbor-1">
+                <div class="zl">
+                    <span class="search-selected">
+                        全部
+                    </span>
+                    <ul class="search-select">
+                        <li class="search-select-item" id="all" onmouseover="changecolor(0)" onmouseout="changecolorback()" onclick="searchselectchoose(0)">全部</li> 
+                        <li class="search-select-item" id="doc" onmouseover="changecolor(1)" onmouseout="changecolorback()" onclick="searchselectchoose(1)">DOC</li>	   
+                        <li class="search-select-item" id="pdf" onmouseover="changecolor(2)" onmouseout="changecolorback()" onclick="searchselectchoose(2)">PDF</li>	   
+                        <li class="search-select-item" id="ppt" onmouseover="changecolor(3)" onmouseout="changecolorback()" onclick="searchselectchoose(3)">PPT</li>	   
+                        <li class="search-select-item" id="txt" onmouseover="changecolor(4)" onmouseout="changecolorback()" onclick="searchselectchoose(4)">TXT</li>	   
+                        <li class="search-select-item" id="rar" onmouseover="changecolor(5)" onmouseout="changecolorback()" onclick="searchselectchoose(5)">RAR</li>	   
+                    </ul>
+                </div>
+                <div class="search-main">
+                    <form action="#" class="search-form">
+                        <input type="text" name="word" maxlength="30" class="search-input" />
+                        <input type="submit" name="" class="search-button" value="查询" />
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+		<!-- view-->
+        <div class="view">
+        		<div class="view-block">
+                	<div class="view-block-left">
+                		<div class="view-block-left-img-1-1"> 
+                		</div>
+                	</div>
+                	<div class="view-block-right">
+                    	<span class="view-block-right-title">巴拉巴拉拉</span>
+                        <span class="view-tags">
+                        	Tags: 
+                        </span>
+                        <span class"view-tag">
+                        <a href="#"  class="view-tag">try</a>	
+                        </span>
+                         <span class="view-right-detail">
+                        	分享日期：2012-8-27 &nbsp; 分享者：
+                            <br/>
+                            浏览次数：12 次 &nbsp; 下载次数：12 次 
+                        </span>
+                        <span class="view-block-right-discribe">aadsfadsfasdfasdfasdfadsf挂拉呱啦啦<br />asdfasdf</span>
+                       
+                	</div>               
+                </div>
+                
+                <div class="view-block-2">
+                	<div class="view-block-left-2">
+                    	<div class="view-block-left-img-2-1">
+                        </div>
+                    </div>
+                    <div class="view-block-right-2">
+                    地址巴拉拉
+                    </div>
+                </div>
+                
+                <div class="view-block-3">
+                	<div class="view-block-left-3">
+                    	<div class="view-block-left-img-3">
+                        </div>
+                    </div>
+                    <div class="view-block-right-3">
+                    	<div class="view-like">
+                        </div>
+                        <div class="view-dislike">
+                        </div>
+                    </div>
+                </div>
+        </div>
+            
+        
+        
+        <!-- view-->
+        <div id="footer">
+            <div class="footer-line1">
+                <a href="http://localhost/BlackHoleNav/index.php/about/join">加入网协</a>
+                |
+                <a href="http://localhost/BlackHoleNav/index.php/about">BlackHole导航</a>
+                |
+                <a href="http://localhost/BlackHoleNav/index.php/about/contact">联系我们</a>
+                |
+                <a href="http://localhost/BlackHoleNav/index.php/about/np_tech">关于网协技术</a>
+            </div>
+            <div class="footer-line2">2012 bitNP Tech.</div>
+        </div>
+    </body>
+</html> 

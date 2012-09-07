@@ -1,0 +1,71 @@
+.home{
+	width:600px;
+	position:relative;	
+    padding: 5px;
+    margin: 30px auto ;
+	overflow:hidden;
+	}
+
+.home-a{
+	width:550px;
+	position:relative;		
+	float:left;
+	margin-top:20px;
+	margin-left:20px;
+	}
+.home-top{
+	width:550px;
+	magin-top:5px;
+	overflow:auto;
+	cursor:pointer;
+	}
+.homecheck{
+	text-align:center;
+	width:170px;
+	padding:5px;
+	float:left;
+    border: 2px #1b73b7 solid;
+	background-color:#1b73b7;
+	color:#FFF;
+	}
+.homeuncheck{
+	text-align:center;
+	width:170px;
+	padding:5px;
+	float:left;
+    border-left: 1px #1b73b7 solid;
+    border-top: 1px #1b73b7 solid;
+    border-right: 1px #1b73b7 solid;
+    border-bottom: 2px #1b73b7 solid;
+	}
+.home-down{
+	margin-top:-2px;
+	position:relative;
+	width:544px;
+	height:300px;
+    border-left: 2px #1b73b7 solid;
+    border-right: 2px #1b73b7 solid;
+    border-bottom: 2px #1b73b7 solid;
+	}
+.homecheckdisplay{
+	text-align:center;
+	position:absolute;
+	width:100%;
+	height:290px;
+	z-index:1000;
+	margin-top:10px;
+	background:#FFF;
+	bacground:
+	}
+.homeuncheckdisplay{
+	position:absolute;	
+	text-align:center;
+	width:100%;
+	height:290px;
+	margin-top:10px;
+	z-index:-1000;
+	background:#FFF;
+	}
+.inputfont{
+	font-size:16px;
+	}
