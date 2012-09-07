@@ -1,1 +1,3 @@
 this is a file just used to try out how to commit.
+HIT 1
+HIT 2
