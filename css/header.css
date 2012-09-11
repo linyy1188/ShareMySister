@@ -1,0 +1,58 @@
+body{
+    background: url("../images/bkg.jpg") repeat-x scroll 0 0 white;
+    font-family: Helvetica,"Microsoft Yahei","微软雅黑",Verdana,Arial,STHeiti;
+}
+
+.head{
+    margin: 0 auto;
+    background: url("../images/logo.png") no-repeat;
+    width: 960px;
+    height: 260px;
+    position: relative;
+}
+
+.barword{
+    padding-top: 64px;
+    padding-left: 220px;
+}
+.bar-left{
+    background: url("../images/bar1.png") no-repeat;
+    width: 500px;
+    height: 33px;
+    float: left;
+    display: block;
+}
+.bar-left-item{
+    float: left;
+    width: 108px;
+    text-align: center;
+}
+.bar-left-start{margin-left: 33px;}
+.bar-left-end{margin-right: 33px;}
+.bar-right{
+    background: url("../images/bar2.png") no-repeat;
+    width: 160px;
+    height: 33px;
+    margin-left: 45px;
+    float: left;
+}
+.bar-right-item{
+    float: left;
+    width: 65px;
+    text-align: center;
+}
+.bar-right-login{margin-left: 15px;}
+.bar-right-signup{margin-right: 15px;}
+
+.bar-a{
+    color: white;
+    line-height: 33px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.wrap{
+    width: 960px;
+    margin: 0 auto;
+}

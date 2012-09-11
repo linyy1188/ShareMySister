@@ -8,4 +8,9 @@ application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 
+upload/*
+!upload/index.html
+!upload/.htaccess
+
 user_guide/
+/nbproject/
