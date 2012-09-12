@@ -1,9 +1,7 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+if (!defined('BASEPATH'))
+    exit('No direct script access allowed');
 
 /**
  * Description of upload
@@ -13,7 +11,7 @@
 class upload extends CI_Controller {
 
     function index() {
-        $csses = array('reset', 'header','footer');
+        $csses = array('reset', 'header', 'footer');
         $head_data['csses'] = $csses;
         $this->load->view('header', $head_data);
         $this->load->view('footer');
