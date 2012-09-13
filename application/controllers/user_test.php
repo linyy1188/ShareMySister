@@ -10,6 +10,12 @@ if (!defined('BASEPATH'))
  */
 class user_test extends CI_Controller {
 
+    function findone() {
+        $this->load->model('user_m');
+        $tmp = $this->input->get('name');
+        var_dump($this->user_m->get_user_by_name($tmp));
+    }
+
     function createuser() {
         $this->load->library('Mongo_db');
 
@@ -20,14 +26,14 @@ class user_test extends CI_Controller {
                 ->get('user_class');
 
         var_dump($result[0]['_id']);
-        
+
         $post = array(
             "name" => "admin",
             "nickname" => "管理员",
             "class" => $result[0]['_id']
         );
-        
-        $this->mongo_db->insert('user',$post);
+
+        $this->mongo_db->insert('user', $post);
     }
 
     function creatclass() {
