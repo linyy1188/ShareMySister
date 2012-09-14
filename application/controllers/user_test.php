@@ -28,7 +28,7 @@ class user_test extends CI_Controller {
 
     function testlogin() {
         $this->load->library('share_auth');
-        var_dump($this->share_auth->login('admin', 'admin'));
+        var_dump($this->share_auth->login('admin', 'admin', 2000));
     }
 
     function findone() {

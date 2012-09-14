@@ -49,8 +49,11 @@ class share_auth {
 
     function set_valid_user($uid, $pwd, $lgtime) {
         $hash = $this->generate_hash($uid->{'$id'}, $pwd, $lgtime->sec);
-        $this->_CI->session->set_userdata('uid', $uid->{'$id'});
-        $this->_CI->session->set_userdata('hash', $hash);
+        $sess_data = array(
+            'uid' => $uid->{'$id'},
+            'hash' => $hash
+        );
+        $this->_CI->session->set_userdata($sess_data);
     }
 
     /**
@@ -79,9 +82,16 @@ class share_auth {
         }
     }
 
+    /**
+     * 判断权限
+     * 
+     * 如果不使用is_logged_in，则不会判断当前登录用户是否有登录权限
+     * @param type $item
+     * @return boolean
+     */
     function is_allow($item) {
         if (is_null($this->user_data))
-            if(!$this->valid_user()) // 若没有userdata则判断session信息
+            if (!$this->valid_user()) // 若没有userdata则判断session信息
                 return FALSE;
 
         // 判断用户权限
@@ -109,7 +119,7 @@ class share_auth {
         }
     }
 
-    function login($uname, $pwd) {
+    function login($uname, $pwd, $sess_expira_time = 7200) {
         $this->logout();
 
         $user_data = $this->_CI->user_m->get_user_by_name($uname);
@@ -117,7 +127,7 @@ class share_auth {
             return FALSE; // 用户名不存在
 
         $this->user_data = $user_data;
-        
+
         if ($user_data['origin'] == 1) {
             if (!$this->is_allow("allow_login")) {
                 return FALSE; // 用户被禁止登录
@@ -126,6 +136,7 @@ class share_auth {
                 $uid = $user_data['_id'];
                 $newlogtime = $this->_CI->user_m->set_logtime($uid);
                 if ($newlogtime != FALSE) {
+                    $this->_CI->session->set_expiretime($sess_expira_time);
                     $this->set_valid_user($uid, $pwd, $newlogtime);
                     return TRUE;
                 } else {

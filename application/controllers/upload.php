@@ -11,6 +11,8 @@ if (!defined('BASEPATH'))
 class upload extends CI_Controller {
 
     function index() {
+        $this->share_auth->is_allow('');
+        
         $csses = array('upload.css');
         $head_data['csses'] = $csses;
         $this->load->view('header', $head_data);

@@ -12,5 +12,5 @@ $config['jquery'] = 'jquery-1.8.1.min.js';
 
 $config['title'] = '';
 
-
+// 时区设置
 date_default_timezone_set('Asia/Shanghai');
