@@ -10,6 +10,27 @@ if (!defined('BASEPATH'))
  */
 class user_test extends CI_Controller {
 
+    function test() {
+        $a = new MongoDate();
+        echo($a->sec);
+    }
+
+    function testallow() {
+        $this->load->library('share_auth');
+        $item = $this->input->get('a');
+        var_dump($this->share_auth->is_allow($item));
+    }
+
+    function testsess() {
+        $this->load->library('share_auth');
+        var_dump($this->share_auth->is_logged_in());
+    }
+
+    function testlogin() {
+        $this->load->library('share_auth');
+        var_dump($this->share_auth->login('admin', 'admin'));
+    }
+
     function findone() {
         $this->load->model('user_m');
         $tmp = $this->input->get('name');

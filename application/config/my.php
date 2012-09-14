@@ -11,3 +11,6 @@ $config['salt2'] = 'pq=nMxQ7Bbo<';
 $config['jquery'] = 'jquery-1.8.1.min.js';
 
 $config['title'] = '';
+
+
+date_default_timezone_set('Asia/Shanghai');
