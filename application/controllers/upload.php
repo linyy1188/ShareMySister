@@ -11,7 +11,7 @@ if (!defined('BASEPATH'))
 class upload extends CI_Controller {
 
     function index() {
-        $csses = array('reset', 'header', 'footer');
+        $csses = array('upload.css');
         $head_data['csses'] = $csses;
         $this->load->view('header', $head_data);
         $this->load->view('footer');

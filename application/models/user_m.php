@@ -36,6 +36,19 @@ class user_m extends CI_Model {
         else
             return null;
     }
+    
+    function set_logtime($uid){
+        $logtime = now();
+        $logtime_tmp = new MongoDate($logtime);
+        
+        if($this->mongo_db
+                ->where(array('_id'=>$uid))
+                ->update('user',array('logtime'=>$logtime_tmp)))
+                return $logtime;
+        else
+            return FALSE;
+        
+    }
 
     function creat_user($name, $origin = 1, $pwd = "", $nickname = null, $class = null, $allows = null) {
         if(is_null($nickname))

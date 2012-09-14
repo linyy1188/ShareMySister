@@ -22,8 +22,8 @@ class about extends CI_Controller {
      */
     function index() {
         $head_data = null;
-        $csses = array('reset', 'header', 'about', 'footer');
-        $jses = array($this->config->item('jquery'));
+        $csses = array('about.css');
+        //$jses = array($this->config->item('jquery'));
 
         $head_data['csses'] = $csses;
         $head_data['jses'] = $jses;
@@ -38,8 +38,8 @@ class about extends CI_Controller {
      */
     function join() {
         $head_data = null;
-        $csses = array('reset', 'header', 'about', 'footer');
-        $jses = array($this->config->item('jquery'));
+        $csses = array('about.css');
+        //$jses = array($this->config->item('jquery'));
 
         $head_data['csses'] = $csses;
         $head_data['jses'] = $jses;
@@ -53,8 +53,8 @@ class about extends CI_Controller {
      */
     function np_tech() {
         $head_data = null;
-        $csses = array('reset', 'header', 'about', 'footer');
-        $jses = array($this->config->item('jquery'));
+        $csses = array('about.css');
+        //$jses = array($this->config->item('jquery'));
 
         $head_data['csses'] = $csses;
         $head_data['jses'] = $jses;
@@ -68,8 +68,8 @@ class about extends CI_Controller {
      */
     function contact() {
         $head_data = null;
-        $csses = array('reset', 'header', 'about', 'footer');
-        $jses = array($this->config->item('jquery'));
+        $csses = array('about.css');
+        //$jses = array($this->config->item('jquery'));
 
         $head_data['csses'] = $csses;
         $head_data['jses'] = $jses;
