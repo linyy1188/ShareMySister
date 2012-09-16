@@ -11,13 +11,25 @@ if (!defined('BASEPATH'))
 class upload extends CI_Controller {
 
     function index() {
-        
-        if(!$this->share_auth->is_allow('allow_post'))
+
+        if (!$this->share_auth->is_allow('allow_post'))
             redirect('login');
+        $this->load->helper(array('form', 'url'));
+        $this->load->library('form_validation');
+        
+        $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[5]|max_length[12]|xss_clean');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required|matches[passconf]');
+        $this->form_validation->set_rules('passconf', 'Password Confirmation', 'trim|required');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
         
         $csses = array('upload.css');
         $head_data['csses'] = $csses;
         $this->load->view('header', $head_data);
+        if ($this->form_validation->run() == FALSE) {
+            $this->load->view('upload_index');
+        } else {
+            $this->load->view('upload_success');
+        }
         $this->load->view('footer');
     }
 
