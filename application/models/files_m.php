@@ -15,6 +15,14 @@ class files extends CI_Model {
         $this->load->library('mongo_db');
     }
 
+    function get_by_id() {
+        
+    }
+
+    function get_by_name() {
+        
+    }
+
 }
 
 ?>
