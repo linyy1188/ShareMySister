@@ -305,18 +305,28 @@ class file_m extends CI_Model {
 	*@param $filetype 文件类型
 	*@param $limit 返回的结果数量
 	*@param $offset 偏移量
+    *@param $order Sort the documents based on the parameters passed. To set values to descending order,
+    *   you must pass values of either -1, FALSE, 'desc', or 'DESC', else they will be
+    *   set to 1 (ASC).
 	*/
-	/*
-    function search_file_name($filename, $filetype, $limit = 99999, $offset = 0){
-        $query = $this->mongo_db
-        ->like('file_name', $filename, 'u')
-		->where(array('file_type' => $filetype))
-        ->offset($offset)
-        ->limit($limit)
-        ->get('file');
+    function search_file_name($filename, $filetype = null, $limit = 99999, $offset = 0, $order = array()){
+        if (is_null($filetype))
+            $query = $this->mongo_db
+            ->like('file_name', $filename, 'u')
+            ->offset($offset)
+            ->limit($limit)
+            ->order_by($order)
+            ->get('file');
+        else
+            $query = $this->mongo_db
+            ->like('file_name', $filename, 'u')
+            ->where(array('file_type' => $filetype))
+            ->offset($offset)
+            ->limit($limit)
+            ->order_by($order)
+            ->get('file');
         return $query;
     }
-	*/
 
 }
 
