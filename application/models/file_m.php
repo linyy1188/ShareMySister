@@ -328,6 +328,18 @@ class file_m extends CI_Model {
         return $query;
     }
 
+    /**
+    *
+    *
+    */
+    function get_files_by($order_by, $order, $num){
+        $query = $this->mongo_db
+        ->order_by(array($order_by -> $order))
+        ->limit($num)
+        ->get('file');
+        return $query;
+    }
+
 }
 
 ?>
