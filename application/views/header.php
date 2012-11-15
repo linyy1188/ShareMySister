@@ -7,9 +7,6 @@
         <?php else: ?>
             <title>ShareMySister</title>
         <?php endif; ?>
-        <link href="<?php echo base_url("css/reset.css"); ?>" type="text/css" rel="stylesheet" />
-        <link href="<?php echo base_url("css/header.css"); ?>" type="text/css" rel="stylesheet" />
-        <link href="<?php echo base_url("css/footer.css"); ?>" type="text/css" rel="stylesheet" />
         <?php if (is_array($csses)): ?>
             <?php foreach ($csses as $css): ?>
                 <link href="<?php echo base_url("css/$css"); ?>" type="text/css" rel="stylesheet" />
