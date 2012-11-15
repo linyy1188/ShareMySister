@@ -25,9 +25,9 @@ class file_m extends CI_Model {
         if (is_null($fileid))
             return null;
         $result=$this->mongo_db
-                ->where($array('_id' => $fileid))
-                ->get('file')
-        if (count($result)>0)
+                ->where(array('_id' => $fileid))
+                ->get('file');
+        if (count($result) > 0)
             return $result[0];
         else
             return null;
@@ -43,8 +43,8 @@ class file_m extends CI_Model {
         if (is_null($name))
             return null;
         $result=$this->mongo_db
-                ->where($array('file_name' => $name))
-                ->get('file')
+                ->where(array('file_name' => $name))
+                ->get('file');
         if (count($result)>0)
             return $result;
         else
@@ -112,7 +112,7 @@ class file_m extends CI_Model {
                 $file_tags=$query['file_tags'];
                 foreach ($file_tags as $tagname) {//process every tag of the file
                     $result = $this->mongo_db
-                    ->where(array('tags_name' => $tagname));
+                    ->where(array('tags_name' => $tagname))
                     ->get('tags');
                     $tags=$result[0];
                     if (count($tags['tags_file']==1))
