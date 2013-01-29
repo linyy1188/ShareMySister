@@ -29,16 +29,16 @@
             <div class="barword">
                 <ul class="bar-left">
                     <li class="bar-left-item bar-left-start">
-                        <a href="index.html" class="bar-a">资料查询</a>
+                        <a href="/index.php/start/" class="bar-a">资料查询</a>
                     </li>
                     <li class="bar-left-item">
-                        <a href="share.html" class="bar-a">资料分享</a>
+                        <a href="/index.php/share/" class="bar-a">资料分享</a>
                     </li>
                     <li class="bar-left-item">
-                        <a href="item.html" class="bar-a">资料目录</a>
+                        <a href="/index.php/item/" class="bar-a">资料目录</a>
                     </li>
                     <li class="bar-left-item bar-left-end">
-                        <a href="home.html" class="bar-a">个人中心</a>
+                        <a href="/index.php/home/" class="bar-a">个人中心</a>
                     </li>
                 </ul>
                 <ul class="bar-right">

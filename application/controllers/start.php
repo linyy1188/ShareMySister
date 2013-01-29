@@ -16,19 +16,25 @@ class start extends CI_Controller{
 	*/
 
 
-	public function index($page = null, $page_id = null){
+	public function index(){
 		$data_head=null;
 		$data_head['csses'] = array('reset.css', 'main.css', 'footer.css', 'home.css');
-		$data_head['jses'] = array('jquery-1.8.1.min.js', 'searchbar.js', 'shareswitch.js');
+		$data_head['jses'] = array('jquery-1.8.1.min.js', 'searchbar.js', 'shareswitch.js', 'custom.js');
+
+		$this->load->view('header',$data_head);
+		$this->load->view('searchbar');
+		$this->load->view('footer');
+	}
+	public function search($word, $type, $page_id){
+		$data_head=null;
+		$data_head['csses'] = array('reset.css', 'main.css', 'footer.css', 'home.css');
+		$data_head['jses'] = array('jquery-1.8.1.min.js', 'searchbar.js', 'shareswitch.js', 'custom.js');
 
 		$this->load->model('file_m','', FALSE);//load the model
 		$file_most = $this->file_m->get_files_by('view_times', 'DESC', 5);
 		$data_head['file_most'] = $file_most;
 		$this->load->view('header',$data_head);
-		$this->load->view('searchbar');
-		$word = $this->input->get('word');
-		$type = $this->input->get('type');
-		if (!$type||$type == 'all')
+		if (!$type||$type == '全部')
 			$type = null;
 		if (is_numeric($page_id))
 			$page_id = $page_id + 0;
@@ -39,7 +45,7 @@ class start extends CI_Controller{
 			//start page using a helper function
 			//I don't know whether it is correct.
 			$this->load->library('pagination');
-			$config['base_url'] = 'index.php/index/';
+			$config['base_url'] = 'index.php/star/search';
 			$config['total_rows'] = count($query_result);
 			$config['per_page'] = $pagesize;
 			$links = $this->pagination->create_links();

@@ -24,9 +24,9 @@
                     </ul>
                 </div>
                 <div class="search-main">
-                    <form action="#" class="search-form">
-                        <input type="text" name="word" maxlength="100" class="search-input" />
-                        <input type="submit" name="" class="search-button" value="查询" />
+                    <form class="search-form">
+                        <input type="text" name="word" maxlength="100" class="search-input" id="search-text" />
+                        <input type="button" id="search-button" class="search-button" value="查询" />
                     </form>
                 </div>
                 <div class="clear"></div>
