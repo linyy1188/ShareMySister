@@ -11,6 +11,7 @@ class home extends CI_Controller {
 
     function index() {
     	if ($this->share_auth->is_logged_in())
-			2
+    	
+    }	
 }
 ?>

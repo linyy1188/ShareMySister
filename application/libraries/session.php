@@ -149,7 +149,7 @@ class CI_Session {
 		{
 			$session = $this->CI->encrypt->decode($session);
 		}
-		else
+		else$file_name,'',$)
 		{
 			// encryption was not used, so we need to check the md5 hash
 			$hash	 = substr($session, strlen($session)-32); // get last 32 chars
