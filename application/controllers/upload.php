@@ -14,6 +14,7 @@ class upload extends CI_Controller {
 
 //        if (!$this->share_auth->is_allow('allow_post'))
 //            redirect('login');
+	var_dump($this->user_data);
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
         

@@ -11,8 +11,11 @@ if (!defined('BASEPATH'))
 class login extends CI_Controller {
 
     function index() {
-        $this->share_auth->login('admin', 'admin');
-        echo 'ok';
+        $result = $this->share_auth->login('admin', 'admin');
+        if ($result)
+	  $this->load->view('login_success');
+	else
+	  $this->load->view('login');
     }
 
 }
