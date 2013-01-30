@@ -1,4 +1,3 @@
-
    <div class="get">
                 <div class="get-block">
                 	<div class="get-left">
@@ -7,17 +6,14 @@
                     </div>
                     <div class="get-right">
                     	<div class="get-right-title">
-                        <a href="" class="get-right-title">巴拉巴拉拉blablah</a>
+                        <a href="" class="get-right-title"><?php echo $file_name ?></a>
                         </div>
                         <div class="get-right-discribe">
-                        巴拉巴拉拉blablah<br />
-                        巴拉巴拉拉blablah
+                        <?php echo $file_info ?>
                         </div>
                         <div class="get-right-detail">
-                        	分享时间：2012-8-27 &nbsp; 分享者：
+                        	分享者<?php echo $upload_user ?>：
                         </div>
                     </div>
                 </div>
         </div>
-        
-        <!--questget-->

@@ -32,7 +32,7 @@
                         <a href="/index.php/start/" class="bar-a">资料查询</a>
                     </li>
                     <li class="bar-left-item">
-                        <a href="/index.php/share/" class="bar-a">资料分享</a>
+                        <a href="/index.php/upload/" class="bar-a">资料分享</a>
                     </li>
                     <li class="bar-left-item">
                         <a href="/index.php/item/" class="bar-a">资料目录</a>

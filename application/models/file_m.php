@@ -329,10 +329,15 @@ class file_m extends CI_Model {
     }
 
     /**
+    *get files in order
     *
+    *@param $order_by 排序的文件属性
+    *@param $order 顺序
+    *@param $num 结果数量
     *
+    *@return 结果数组
     */
-    function get_files_by($order_by, $order, $num){
+    function get_files_by($order_by='view_times', $order='DESC', $num=5){
         $query = $this->mongo_db
         ->order_by(array($order_by -> $order))
         ->limit($num)

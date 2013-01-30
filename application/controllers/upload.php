@@ -12,8 +12,8 @@ class upload extends CI_Controller {
 
     function index() {
 
-        if (!$this->share_auth->is_allow('allow_post'))
-            redirect('login');
+//        if (!$this->share_auth->is_allow('allow_post'))
+//            redirect('login');
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
         
@@ -22,15 +22,15 @@ class upload extends CI_Controller {
         $this->form_validation->set_rules('passconf', 'Password Confirmation', 'trim|required');
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
         
-        $csses = array('upload.css');
-        $head_data['csses'] = $csses;
-        $this->load->view('header', $head_data);
+	$data_head['csses'] = array('reset.css', 'main.css', 'footer.css', 'upload.css');
+        $this->load->view('header', $data_head);
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('upload_index');
         } else {
             $this->load->view('upload_success');
         }
         $this->load->view('footer');
+        $this->input->post('pas')
     }
 
     function submit() {

@@ -3,11 +3,11 @@
                 <span class="hotsearch-title">
                     热门搜索
                 </span>
-                <a href="" class="hotsearch-content">林一叶.avi</a>
-                <a href="" class="hotsearch-content">林一叶.exe</a>
-                <a href="" class="hotsearch-content">林一叶.mkv</a>
-                <a href="" class="hotsearch-content">林一叶.jpg</a>
-                <a href="" class="hotsearch-content">林一叶.zip</a>
+                <?php if (isset($file_most)): ?>
+                <?php foreach ($file_most as $file): ?>
+                <a href="" class="hotsearch-content"><?php echo $file['file_name'] ?></a>
+                <?php endforeach; ?>
+                <?php endif; ?>
             </div>
             <div class="searchbor-1">
                 <div class="zl">
