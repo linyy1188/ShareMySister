@@ -17,10 +17,9 @@ class upload extends CI_Controller {
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
         
-        $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[5]|max_length[12]|xss_clean');
-        $this->form_validation->set_rules('password', 'Password', 'trim|required|matches[passconf]');
-        $this->form_validation->set_rules('passconf', 'Password Confirmation', 'trim|required');
-        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+        $this->form_validation->set_rules('filename', 'File Name', 'trim|required|min_length[2]|max_length[50]|xss_clean');
+        $this->form_validation->set_rules('fileinfo', 'File Infomation', 'trim|required|xss_clean');
+        $this->form_validation->set_rules('fileaddr', 'File Address', 'trim|required|xss_clean');
         
 	$data_head['csses'] = array('reset.css', 'main.css', 'footer.css', 'upload.css');
         $this->load->view('header', $data_head);
@@ -28,26 +27,17 @@ class upload extends CI_Controller {
             $this->load->view('upload_index');
         } else {
             $this->load->view('upload_success');
+            _submit();
         }
         $this->load->view('footer');
-        $this->input->post('pas')
     }
 
-    function submit() {
-        $m = new Mongo();
-
-        $db = $m->test;
-        $collection = $db->blog;
-
-        $obj = array('title' => "c and i", "author" => "bill", "date" => new MongoDate());
-
-        $collection->insert($obj);
-
-        $cursor = $collection->find();
-
-        foreach ($cursor as $obj) {
-            echo $obj['title'] . "\n";
-        }
+    function _submit() {
+	$this->load->model('file_m','',FALSE);
+	$file_name = $this->input->post('filename',TRUE);
+	$file_info = $this->input->post('fileinfo', TRUE);
+	$file_addr = $this->input->post('fileaddr', TRUE);
+	$this->file_m->create_file($file_name,'','', $file_addr, $file_info,'', $upload_user);
     }
 
 }
