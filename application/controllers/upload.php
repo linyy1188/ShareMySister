@@ -10,6 +10,15 @@ if (!defined('BASEPATH'))
  */
 class upload extends CI_Controller {
 
+
+   function _submit() {
+	$this->load->model('file_m','',FALSE);
+	$file_name = $this->input->post('filename',TRUE);
+	$file_info = $this->input->post('fileinfo', TRUE);
+	$file_addr = $this->input->post('fileaddr', TRUE);
+	$this->file_m->create_file($file_name,'','', $file_addr, $file_info,'', $upload_user);
+    }
+
     function index() {
 
 //        if (!$this->share_auth->is_allow('allow_post'))
@@ -28,18 +37,11 @@ class upload extends CI_Controller {
             $this->load->view('upload_index');
         } else {
             $this->load->view('upload_success');
-            _submit();
+            $this->_submit();
         }
         $this->load->view('footer');
     }
 
-    function _submit() {
-	$this->load->model('file_m','',FALSE);
-	$file_name = $this->input->post('filename',TRUE);
-	$file_info = $this->input->post('fileinfo', TRUE);
-	$file_addr = $this->input->post('fileaddr', TRUE);
-	$this->file_m->create_file($file_name,'','', $file_addr, $file_info,'', $upload_user);
-    }
 
 }
 
